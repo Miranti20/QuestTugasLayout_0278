@@ -9,6 +9,11 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.Image
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.painterResource
 
 @Composable
 fun HalamanUtamaLayout(modifier: Modifier = Modifier) {
@@ -30,5 +35,41 @@ fun HalamanUtamaLayout(modifier: Modifier = Modifier) {
         )
 
         Spacer(modifier = Modifier.height(20.dp))
+    }
+}
+
+@Composable
+fun KartuProfilItem(
+    bgResId: Int,
+    namaResId: Int,
+    useCursiveFont: Boolean,
+    phoneResId: Int?,
+    alamatResId: Int
+) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = colorResource(id = bgResId)
+        )
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.logo_umy),
+                contentDescription = null,
+                modifier = Modifier.size(65.dp)
+            )
+
+            Image(
+                painter = painterResource(id = R.drawable.logo_umy),
+                contentDescription = null,
+                modifier = Modifier.size(65.dp)
+            )
+        }
     }
 }
