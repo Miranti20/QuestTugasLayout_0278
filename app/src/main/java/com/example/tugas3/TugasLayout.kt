@@ -37,6 +37,44 @@ fun HalamanUtamaLayout(modifier: Modifier = Modifier) {
         )
 
         Spacer(modifier = Modifier.height(20.dp))
+
+        KartuProfilItem(
+            bgResId = R.color.card_grey,
+            namaResId = R.string.nama_1,
+            useCursiveFont = true,
+            phoneResId = null,
+            alamatResId = R.string.alamat_1
+        )
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        KartuProfilItem(
+            bgResId = R.color.card_purple,
+            namaResId = R.string.nama_2,
+            useCursiveFont = false,
+            phoneResId = R.string.phone_2,
+            alamatResId = R.string.alamat_2
+        )
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        KartuProfilItem(
+            bgResId = R.color.card_blue,
+            namaResId = R.string.nama_3,
+            useCursiveFont = false,
+            phoneResId = R.string.phone_3,
+            alamatResId = R.string.alamat_3
+        )
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        KartuProfilItem(
+            bgResId = R.color.card_green,
+            namaResId = R.string.nama_4,
+            useCursiveFont = false,
+            phoneResId = R.string.phone_4,
+            alamatResId = R.string.alamat_4
+        )
     }
 }
 
