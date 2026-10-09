@@ -16,13 +16,16 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 
 @Composable
 fun HalamanUtamaLayout(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(top = 40.dp, start = 16.dp, end = 16.dp),
+            .padding(top = 40.dp, start = 16.dp, end = 16.dp)
+            .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
@@ -74,6 +77,14 @@ fun HalamanUtamaLayout(modifier: Modifier = Modifier) {
             useCursiveFont = false,
             phoneResId = R.string.phone_4,
             alamatResId = R.string.alamat_4
+        )
+        Spacer(modifier = Modifier.height(30.dp))
+
+        Text(
+            text = stringResource(id = R.string.copy),
+            fontSize = 12.sp,
+            color = Color.Gray,
+            modifier = Modifier.padding(bottom = 20.dp)
         )
     }
 }
