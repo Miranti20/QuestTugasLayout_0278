@@ -14,6 +14,8 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
 
 @Composable
 fun HalamanUtamaLayout(modifier: Modifier = Modifier) {
@@ -64,6 +66,35 @@ fun KartuProfilItem(
                 contentDescription = null,
                 modifier = Modifier.size(65.dp)
             )
+
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(horizontal = 12.dp),
+                horizontalAlignment = Alignment.Start
+            ) {
+                Text(
+                    text = stringResource(id = namaResId),
+                    color = Color.White,
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = if (useCursiveFont) FontFamily.Cursive else FontFamily.Default
+                )
+
+                if (phoneResId != null) {
+                    Text(
+                        text = stringResource(id = phoneResId),
+                        color = colorResource(id = R.color.text_cyan),
+                        fontSize = 13.sp
+                    )
+                }
+
+                Text(
+                    text = stringResource(id = alamatResId),
+                    color = colorResource(id = R.color.text_yellow),
+                    fontSize = 13.sp
+                )
+            }
 
             Image(
                 painter = painterResource(id = R.drawable.logo_umy),
