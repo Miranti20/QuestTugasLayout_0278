@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun HalamanUtamaLayout(modifier: Modifier = Modifier) {
@@ -152,4 +153,10 @@ fun KartuProfilItem(
             )
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun HalamanUtamaLayoutPreview() {
+    HalamanUtamaLayout()
 }
